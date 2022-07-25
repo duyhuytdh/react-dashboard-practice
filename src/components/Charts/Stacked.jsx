@@ -7,6 +7,7 @@ import {
   Category,
   StackingColumnSeries,
   Tooltip,
+  SeriesDirective,
 } from "@syncfusion/ej2-react-charts";
 
 import {
@@ -21,12 +22,20 @@ const Stacked = ({ width, height }) => {
       width={width}
       height={height}
       id="stacked-chart"
-      primaryXAxis={stackedPrimaryXAxis}
-      primaryYAxis={stackedPrimaryYAxis}
+      // primaryXAxis={stackedPrimaryXAxis}
+      // primaryYAxis={stackedPrimaryYAxis}
+      chartArea={{ border: { width: 0 } }}
+      tooltip={{ enable: true }}
+      // legendSettings={{ background: "white" }}
     >
       <Inject
         services={[Legend, Category, StackingColumnSeries, Tooltip]}
       ></Inject>
+      <SeriesCollectionDirective>
+        {stackedCustomSeries.map((item, index) => (
+          <SeriesDirective key={index} {...item}></SeriesDirective>
+        ))}
+      </SeriesCollectionDirective>
     </ChartComponent>
   );
 };

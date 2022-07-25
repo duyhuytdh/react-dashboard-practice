@@ -8,6 +8,7 @@
     "@syncfusion/ej2-react-calendars": "^20.2.38",
     "@syncfusion/ej2-react-charts": "^20.2.38",
     "@syncfusion/ej2-react-dropdowns": "^20.2.38",
+    "@syncfusion/ej2-react-grids": "^20.2.39",
     "@syncfusion/ej2-react-inputs": "^20.2.38",
     "@syncfusion/ej2-react-kanban": "^20.2.38",
     "@syncfusion/ej2-react-popups": "^20.2.38",
