@@ -21,12 +21,29 @@ const Orders = () => {
   return (
     <div className="m-2 p-2 mt-10 pt-10 md:m-10 md:p-10 bg-white rounded-3xl">
       <Header category="Page" title="Orders"></Header>
-      <GridComponent>
+      <GridComponent
+        id="gridComp"
+        dataSource={ordersData}
+        allowPaging
+        allowSorting
+      >
         <ColumnsDirective>
           {ordersGrid.map((item, index) => (
             <ColumnDirective key={index} {...item}></ColumnDirective>
           ))}
         </ColumnsDirective>
+        <Inject
+          services={[
+            Resize,
+            Sort,
+            ContextMenu,
+            Filter,
+            Page,
+            ExcelExport,
+            PdfExport,
+            Edit,
+          ]}
+        />
       </GridComponent>
     </div>
   );
