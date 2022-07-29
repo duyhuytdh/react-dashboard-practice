@@ -1,9 +1,12 @@
 import React from 'react'
 
+import { Layout, Header } from "../../components";
 const Line = () => {
   return (
-    <div>Line</div>
-  )
-}
+    <Layout>
+      <Header category="Chart" title="Inflation"></Header>
+    </Layout>
+  );
+};
 
 export default Line
