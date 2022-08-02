@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { Layout, Header, LineChart } from "../../components";
+
 const Line = () => {
   return (
     <Layout>
