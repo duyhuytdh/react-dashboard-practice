@@ -4,8 +4,32 @@ import { FiSettings } from "react-icons/fi";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 
 import { registerLicense } from "@syncfusion/ej2-base";
-import {Footer, Header, Navbar, ThemeSettings, Sidebar} from './components';
-import { ColorPicker, Customers, ECommerce, Orders, Employees, Kanban, Editor, Calendar, Line, Area, Bar, Pie, Stacked, Financial, Pyramid, ColorMapping } from "./pages";
+import {
+  Footer,
+  Header,
+  Navbar,
+  ThemeSettings,
+  Sidebar,
+  Cart,
+} from "./components";
+import {
+  ColorPicker,
+  Customers,
+  ECommerce,
+  Orders,
+  Employees,
+  Kanban,
+  Editor,
+  Calendar,
+  Line,
+  Area,
+  Bar,
+  Pie,
+  Stacked,
+  Financial,
+  Pyramid,
+  ColorMapping,
+} from "./pages";
 
 import { useStateContext } from "./contexts/ContextProvider";
 import "./App.css";
@@ -60,6 +84,7 @@ const App = () => {
 
             <div>
               {themeSetting && <ThemeSettings />}
+              <Cart />
               <Routes>
                 {/* Dashboard */}
                 <Route path="/" element={<ECommerce />} />

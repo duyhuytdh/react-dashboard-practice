@@ -5871,3 +5871,37 @@ export const PyramidData = [
   { x: 'Fruits', y: 520, text: '520 cal' },
   { x: 'Bread, Rice, Pasta', y: 930, text: '930 cal' },
 ];
+
+export const StackedColumnsData = [
+  [
+    { x: "2014", y: 111.1 },
+    { x: "2015", y: 127.3 },
+    { x: "2016", y: 143.4 },
+    { x: "2017", y: 159.9 },
+  ],
+  [
+    { x: "2014", y: 76.9 },
+    { x: "2015", y: 99.5 },
+    { x: "2016", y: 121.7 },
+    { x: "2017", y: 142.5 },
+  ],
+  [
+    { x: "2014", y: 66.1 },
+    { x: "2015", y: 79.3 },
+    { x: "2016", y: 91.3 },
+    { x: "2017", y: 102.4 },
+  ],
+  [
+    { x: "2014", y: 34.1 },
+    { x: "2015", y: 38.2 },
+    { x: "2016", y: 44.0 },
+    { x: "2017", y: 51.6 },
+  ],
+];
+
+export const StackedColumnsSeries = [
+  { xName: "x", yName: "y", name: "UK", type: "StackingColumn" },
+  { xName: "x", yName: "y", name: "Germany", type: "StackingColumn" },
+  { xName: "x", yName: "y", name: "France", type: "StackingColumn" },
+  { xName: "x", yName: "y", name: "Italy", type: "StackingColumn" },
+];
