@@ -4,14 +4,7 @@ import { FiSettings } from "react-icons/fi";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 
 import { registerLicense } from "@syncfusion/ej2-base";
-import {
-  Footer,
-  Header,
-  Navbar,
-  ThemeSettings,
-  Sidebar,
-  Cart,
-} from "./components";
+import { Footer, Header, Navbar, ThemeSettings, Sidebar } from "./components";
 import {
   ColorPicker,
   Customers,
@@ -84,7 +77,6 @@ const App = () => {
 
             <div>
               {themeSetting && <ThemeSettings />}
-              <Cart />
               <Routes>
                 {/* Dashboard */}
                 <Route path="/" element={<ECommerce />} />
