@@ -1,10 +1,15 @@
-import React from 'react'
+import React from "react";
+
 import { MdOutlineCancel } from "react-icons/md";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
+import { useStateContext } from "../contexts/ContextProvider";
+
 import { Button } from ".";
 import { cartData } from "../data/dummy";
 
 const Cart = () => {
+  const { listItems, setListItems } = useStateContext();
+
   return (
     <div className="bg-half-transparent w-screen fixed nav-item top-0 right-0">
       <div className="float-right h-screen dark:text-gray-200 bg-white dark:[#484B52] w-400 p-8">
@@ -41,15 +46,25 @@ const Cart = () => {
                   <button
                     type="button"
                     className="border-r-1 border-color dark:border-gray-500 text-green-600 items-center p-2"
+                    onClick={() => {
+                      item.qty++;
+                      setListItems(cartData);
+                    }}
                   >
                     <AiOutlinePlus />
                   </button>
                   <p className="w-fit border-r-1 border-color dark:border-gray-500 items-center p-2 text-green-600">
-                    0
+                    {item.qty}
                   </p>
                   <button
                     type="button"
                     className="border-r-1 border-color dark:border-gray-500 text-red-600 items-center p-2"
+                    onClick={() => {
+                      if (item.qty > 0) {
+                        item.qty--;
+                        setListItems(cartData);
+                      }
+                    }}
                   >
                     <AiOutlineMinus />
                   </button>
@@ -85,4 +100,4 @@ const Cart = () => {
   );
 };
 
-export default Cart
+export default Cart;
