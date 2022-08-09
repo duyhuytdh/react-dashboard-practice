@@ -31,10 +31,8 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
 
 const Navbar = () => {
   const {
-    activeMenu,
     setActiveMenu,
     isClicked,
-    setIsClicked,
     handleClick,
     screenSize,
     setScreenSize,
@@ -75,14 +73,14 @@ const Navbar = () => {
         <NavButton
           title="Chat"
           customFunc={() => handleClick("chat")}
-          dotColor="#03C9D7"
+          dotColor={currentColor}
           color={currentColor}
           icon={<BsChatLeft />}
         ></NavButton>
         <NavButton
           title="Notification"
           customFunc={() => handleClick("notification")}
-          dotColor="#03C9D7"
+          dotColor={currentColor}
           color={currentColor}
           icon={<RiNotification3Line />}
         ></NavButton>

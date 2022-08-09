@@ -8,11 +8,11 @@ import { Button } from ".";
 import { cartData } from "../data/dummy";
 
 const Cart = () => {
-  const { listItems, setListItems } = useStateContext();
+  const { setListItems, currentColor } = useStateContext();
 
   return (
     <div className="bg-half-transparent w-screen fixed nav-item top-0 right-0">
-      <div className="float-right h-screen dark:text-gray-200 bg-white dark:[#484B52] w-400 p-8">
+      <div className="float-right h-screen dark:text-gray-200 bg-white dark:bg-[#484B52] md:w-400 p-8 duration-1000 ease-in-out transition-all">
         <div className="flex justify-between items-center">
           <p className="font-semibold text-lg">Shopping Cart</p>
           <Button
@@ -88,7 +88,7 @@ const Cart = () => {
         <div className="mt-5">
           <Button
             color="white"
-            bgColor="rgb(3,201,215)"
+            bgColor={currentColor}
             size="1xl"
             borderRadius="10px"
             text="Place Order"
